@@ -7,7 +7,7 @@ services:
 asir_httpd:  
 image: httpd:2.4  
 ports:  
--"8080"  
+-"80:80"  
 volumes:  
 -/home/fabi/SRI/Tarea_volumenes/APACHE/paginas  
 container_name: asir_httpd  
@@ -24,3 +24,23 @@ Le añadimos:
 < h1 >Hola mundo < /h1 >  
 </ html >   
 En la barra del navegador escribimos: "localhost:8000" y aparecerá nuestro texto.  
+# 6.
+
+Realizamos los mismos pasos que antes pero con los nuevos datos:    
+services:    
+asir_web1:  
+image: httpd:2.4  
+ports:  
+-"8000:80"  
+volumes:  
+-/home/fabi/SRI/Tarea_volumenes/APACHE/paginas  
+container_name: asir_web1  
+
+docker run -dit --name my-apache-app -p 8000:80 -v /home/fabi/SRI/Tarea_volumenes/APACHE/paginas:/usr/local/apache2/htdocs/ httpd:2.4
+# 7. 
+Como anteriormente, 
+Creamos index.html añadiendo: 
+< html >  
+< h1 >Hola mundo < /h1 >  
+</ html >   
+En la barra del navegador escribimos: "localhost:8000" y aparecerá nuestro texto.
