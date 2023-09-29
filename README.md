@@ -18,9 +18,9 @@ docker run -dit --name my-apache-app -p 8000:80 -v /home/fabi/SRI/Tarea_volumene
 Utilizamos para esto el siguiente comando:  
 docker run -dit --name my-apache-app -p 8000:80 -v -v"$PWD"/htdocs:/usr/local/apache2/htdocs/ httpd:2.4  
 # 5.
-Creamos un archivo .html en el mismo directorio que el docker-compose.yml  
+Creamos un archivo index.html en el mismo directorio que el docker-compose.yml  
 Le añadimos:  
-<html>  
-<h1>Hola mundo</h1>  
-</html>   
+< html >  
+< h1 >Hola mundo < /h1 >  
+</ html >   
 En la barra del navegador escribimos: "localhost:8000" y aparecerá nuestro texto.  
