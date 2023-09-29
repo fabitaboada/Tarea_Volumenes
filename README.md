@@ -7,7 +7,7 @@ services:
 asir_httpd:
 image: httpd:2.4
 ports:
-- "8080"
+-"8080"
 volumes:
 -/home/fabi/SRI/Tarea_volumenes/APACHE/paginas
 container_name: asir_httpd
